@@ -30,5 +30,21 @@ void setup() {
     // TODO 5:
     // Print system initialization message
     Serial.println("TTP223 Touch Detection System Initialized");
+
+
     Serial.println("Monitoring touch input...");
 }
+
+void loop() {
+
+    // TODO 6:
+    // Read digital value from touch sensor
+    touchState = digitalRead(TOUCH_PIN);
+
+    // TODO 7:
+    // If touch detected (HIGH)
+    if (touchState == HIGH) {
+        Serial.println("Touch Detected");
+    } else {
+        Serial.println("No Touch");
+    }
